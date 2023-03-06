@@ -11,7 +11,24 @@
 		0971BB9629B63D11007A03CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BB9529B63D11007A03CC /* ContentView.swift */; };
 		0971BB9829B63D12007A03CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971BB9729B63D12007A03CC /* Assets.xcassets */; };
 		0971BB9B29B63D12007A03CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971BB9A29B63D12007A03CC /* Preview Assets.xcassets */; };
+		0971BBAC29B63DB0007A03CC /* RemoteDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBAB29B63DB0007A03CC /* RemoteDataRepositoryTests.swift */; };
+		0971BBB429B63E11007A03CC /* FootballPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBB329B63E11007A03CC /* FootballPlayer.swift */; };
+		0971BBB629B63E1E007A03CC /* FootballPlayerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBB529B63E1E007A03CC /* FootballPlayerResponse.swift */; };
+		0971BBB929B63E45007A03CC /* PlayersDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBB829B63E45007A03CC /* PlayersDataService.swift */; };
+		0971BBBB29B63E55007A03CC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBBA29B63E55007A03CC /* NetworkClient.swift */; };
+		0971BBBF29B63E7A007A03CC /* RemoteDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBBE29B63E7A007A03CC /* RemoteDataRepository.swift */; };
+		0971BBC129B63E85007A03CC /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC029B63E85007A03CC /* Mapper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0971BBAD29B63DB0007A03CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0971BB8829B63D11007A03CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0971BB8F29B63D11007A03CC;
+			remoteInfo = FootballPlayers;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0971BB9029B63D11007A03CC /* FootballPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +36,25 @@
 		0971BB9529B63D11007A03CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0971BB9729B63D12007A03CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0971BB9A29B63D12007A03CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0971BBA929B63DB0007A03CC /* FootballPlayersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballPlayersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0971BBAB29B63DB0007A03CC /* RemoteDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataRepositoryTests.swift; sourceTree = "<group>"; };
+		0971BBB329B63E11007A03CC /* FootballPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPlayer.swift; sourceTree = "<group>"; };
+		0971BBB529B63E1E007A03CC /* FootballPlayerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPlayerResponse.swift; sourceTree = "<group>"; };
+		0971BBB829B63E45007A03CC /* PlayersDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersDataService.swift; sourceTree = "<group>"; };
+		0971BBBA29B63E55007A03CC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		0971BBBE29B63E7A007A03CC /* RemoteDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataRepository.swift; sourceTree = "<group>"; };
+		0971BBC029B63E85007A03CC /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0971BB8D29B63D11007A03CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0971BBA629B63DB0007A03CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				0971BB9229B63D11007A03CC /* FootballPlayers */,
+				0971BBAA29B63DB0007A03CC /* FootballPlayersTests */,
 				0971BB9129B63D11007A03CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				0971BB9029B63D11007A03CC /* FootballPlayers.app */,
+				0971BBA929B63DB0007A03CC /* FootballPlayersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +85,7 @@
 		0971BB9229B63D11007A03CC /* FootballPlayers */ = {
 			isa = PBXGroup;
 			children = (
+				0971BBB229B63DF7007A03CC /* Logic */,
 				0971BB9329B63D11007A03CC /* FootballPlayersApp.swift */,
 				0971BB9529B63D11007A03CC /* ContentView.swift */,
 				0971BB9729B63D12007A03CC /* Assets.xcassets */,
@@ -65,6 +100,51 @@
 				0971BB9A29B63D12007A03CC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0971BBAA29B63DB0007A03CC /* FootballPlayersTests */ = {
+			isa = PBXGroup;
+			children = (
+				0971BBAB29B63DB0007A03CC /* RemoteDataRepositoryTests.swift */,
+			);
+			path = FootballPlayersTests;
+			sourceTree = "<group>";
+		};
+		0971BBB229B63DF7007A03CC /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				0971BBBD29B63E6C007A03CC /* Data */,
+				0971BBB729B63E2B007A03CC /* Models */,
+				0971BBBC29B63E5D007A03CC /* Protocols */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		0971BBB729B63E2B007A03CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0971BBB329B63E11007A03CC /* FootballPlayer.swift */,
+				0971BBB529B63E1E007A03CC /* FootballPlayerResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0971BBBC29B63E5D007A03CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0971BBB829B63E45007A03CC /* PlayersDataService.swift */,
+				0971BBBA29B63E55007A03CC /* NetworkClient.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0971BBBD29B63E6C007A03CC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0971BBBE29B63E7A007A03CC /* RemoteDataRepository.swift */,
+				0971BBC029B63E85007A03CC /* Mapper.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +167,24 @@
 			productReference = 0971BB9029B63D11007A03CC /* FootballPlayers.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0971BBA829B63DB0007A03CC /* FootballPlayersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0971BBAF29B63DB0007A03CC /* Build configuration list for PBXNativeTarget "FootballPlayersTests" */;
+			buildPhases = (
+				0971BBA529B63DB0007A03CC /* Sources */,
+				0971BBA629B63DB0007A03CC /* Frameworks */,
+				0971BBA729B63DB0007A03CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0971BBAE29B63DB0007A03CC /* PBXTargetDependency */,
+			);
+			name = FootballPlayersTests;
+			productName = FootballPlayersTests;
+			productReference = 0971BBA929B63DB0007A03CC /* FootballPlayersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +197,10 @@
 				TargetAttributes = {
 					0971BB8F29B63D11007A03CC = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					0971BBA829B63DB0007A03CC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0971BB8F29B63D11007A03CC;
 					};
 				};
 			};
@@ -116,6 +218,7 @@
 			projectRoot = "";
 			targets = (
 				0971BB8F29B63D11007A03CC /* FootballPlayers */,
+				0971BBA829B63DB0007A03CC /* FootballPlayersTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +233,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0971BBA729B63DB0007A03CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +248,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				0971BB9629B63D11007A03CC /* ContentView.swift in Sources */,
+				0971BBB929B63E45007A03CC /* PlayersDataService.swift in Sources */,
 				0971BB9429B63D11007A03CC /* FootballPlayersApp.swift in Sources */,
+				0971BBBF29B63E7A007A03CC /* RemoteDataRepository.swift in Sources */,
+				0971BBC129B63E85007A03CC /* Mapper.swift in Sources */,
+				0971BBB629B63E1E007A03CC /* FootballPlayerResponse.swift in Sources */,
+				0971BBB429B63E11007A03CC /* FootballPlayer.swift in Sources */,
+				0971BBBB29B63E55007A03CC /* NetworkClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0971BBA529B63DB0007A03CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0971BBAC29B63DB0007A03CC /* RemoteDataRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0971BBAE29B63DB0007A03CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0971BB8F29B63D11007A03CC /* FootballPlayers */;
+			targetProxy = 0971BBAD29B63DB0007A03CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0971BB9C29B63D12007A03CC /* Debug */ = {
@@ -317,6 +449,42 @@
 			};
 			name = Release;
 		};
+		0971BBB029B63DB0007A03CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ3GM4S56F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shotikoKlibadze.FootballPlayersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballPlayers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootballPlayers";
+			};
+			name = Debug;
+		};
+		0971BBB129B63DB0007A03CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XZ3GM4S56F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shotikoKlibadze.FootballPlayersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballPlayers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootballPlayers";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +502,15 @@
 			buildConfigurations = (
 				0971BB9F29B63D12007A03CC /* Debug */,
 				0971BBA029B63D12007A03CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0971BBAF29B63DB0007A03CC /* Build configuration list for PBXNativeTarget "FootballPlayersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0971BBB029B63DB0007A03CC /* Debug */,
+				0971BBB129B63DB0007A03CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
