@@ -9,9 +9,9 @@ import Foundation
 
 final class ViewModelFactory: ObservableObject {
     
-    static func makeAllPplayersViewModel () -> PlayersViewModel {
+    static func makeAllPplayersViewModel () -> PlayersListViewModel {
         let dataRepository = RemoteDataRepository(client: MockNetworkClient())
-        let viewModel = PlayersViewModel(service: dataRepository)
+        let viewModel = PlayersListViewModel(service: dataRepository)
         return viewModel
     }
     

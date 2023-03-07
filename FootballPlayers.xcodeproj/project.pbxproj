@@ -19,7 +19,7 @@
 		0971BBBF29B63E7A007A03CC /* RemoteDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBBE29B63E7A007A03CC /* RemoteDataRepository.swift */; };
 		0971BBC129B63E85007A03CC /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC029B63E85007A03CC /* Mapper.swift */; };
 		0971BBC329B65704007A03CC /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC229B65704007A03CC /* MockNetworkClient.swift */; };
-		0971BBC529B65913007A03CC /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC429B65913007A03CC /* PlayersViewModel.swift */; };
+		0971BBC529B65913007A03CC /* PlayersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC429B65913007A03CC /* PlayersListViewModel.swift */; };
 		09AAA1B629B71D75002E76A0 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAA1B529B71D75002E76A0 /* ViewModelFactory.swift */; };
 		09AAA1BA29B72B0F002E76A0 /* PlayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAA1B929B72B0F002E76A0 /* PlayerDetailView.swift */; };
 		09AAA1BC29B73C3D002E76A0 /* PlayerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAA1BB29B73C3D002E76A0 /* PlayerDetailViewModel.swift */; };
@@ -50,7 +50,7 @@
 		0971BBBE29B63E7A007A03CC /* RemoteDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataRepository.swift; sourceTree = "<group>"; };
 		0971BBC029B63E85007A03CC /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		0971BBC229B65704007A03CC /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
-		0971BBC429B65913007A03CC /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
+		0971BBC429B65913007A03CC /* PlayersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListViewModel.swift; sourceTree = "<group>"; };
 		09AAA1B529B71D75002E76A0 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		09AAA1B929B72B0F002E76A0 /* PlayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailView.swift; sourceTree = "<group>"; };
 		09AAA1BB29B73C3D002E76A0 /* PlayerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewModel.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				09AAA1B529B71D75002E76A0 /* ViewModelFactory.swift */,
-				0971BBC429B65913007A03CC /* PlayersViewModel.swift */,
+				0971BBC429B65913007A03CC /* PlayersListViewModel.swift */,
 				09AAA1BB29B73C3D002E76A0 /* PlayerDetailViewModel.swift */,
 			);
 			path = ViewModel;
@@ -278,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0971BBC529B65913007A03CC /* PlayersViewModel.swift in Sources */,
+				0971BBC529B65913007A03CC /* PlayersListViewModel.swift in Sources */,
 				0971BB9629B63D11007A03CC /* PlayersListView.swift in Sources */,
 				0971BBB929B63E45007A03CC /* PlayersDataService.swift in Sources */,
 				09AAA1BC29B73C3D002E76A0 /* PlayerDetailViewModel.swift in Sources */,

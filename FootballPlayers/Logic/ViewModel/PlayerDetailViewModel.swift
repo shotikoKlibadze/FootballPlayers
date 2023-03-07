@@ -32,7 +32,7 @@ class PlayerDetailViewModel: ObservableObject {
             switch result {
             case .success(let player):
                 self?.state = .loaded(player.information)
-                print(player.priority?.rawValue)
+                print(player.priority?.rawValue ?? "")
             case .failure(let error):
                 self?.state = .failed(error)
             }

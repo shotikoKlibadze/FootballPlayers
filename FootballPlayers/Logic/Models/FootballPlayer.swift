@@ -7,7 +7,9 @@
 
 import Foundation
 import SwiftUI
+
 enum Priority: String {
+    
     case high = "High Priority"
     case mid = "Mid Priority"
     case low = "Low Priority"

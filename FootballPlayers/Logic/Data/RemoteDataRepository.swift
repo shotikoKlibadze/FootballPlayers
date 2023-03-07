@@ -60,7 +60,6 @@ final class RemoteDataRepository: PlayersDataService {
             case let .success((data, response)):
                 self?.map(data: data, response: response, completion: { (mapperResult: Result<OnePlayerResponse,Swift.Error>) in
                     switch mapperResult {
-                        
                     case .success(let mapperResponse):
                         completion(.success(FootballPlayer(from: mapperResponse.player)))
                     case .failure(let error):
