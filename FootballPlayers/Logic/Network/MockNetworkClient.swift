@@ -8,11 +8,12 @@
 import Foundation
 
 class MockNetworkClient: NetworkClient {
-    
+	// When this is really a mock then the response should be mutable
     let response = HTTPURLResponse(
         url: URL(string: "http://any-url.com")!,
         statusCode: 200,
         httpVersion: nil,
+		// Force-unwraps should not be used
         headerFields: nil)!
     
     func fetch(from url: URL, completion: @escaping (NetworkClient.Result) -> Void) {
@@ -41,7 +42,9 @@ class MockNetworkClient: NetworkClient {
 private extension MockNetworkClient {
     
     func getDataForPlayer(playerID: Int) -> Data {
+		// Abbreviations should be prevented
         let playerArr = mockData.filter({$0.model.id == playerID})
+		// Force-unwraps should not be used
         let player = playerArr.first.map({$0.json})!
         let data = makeJsonOfOnePlayer(item: player)
         return data
@@ -52,25 +55,33 @@ private extension MockNetworkClient {
         let data = makeJsonOFallPlayers(items: items)
         return data
     }
-    
+
+	// Structs should be preferred over tuples
     func makeItem(id: Int, name: String, information: String, priority: String) -> (model: FootballPlayer, json: [String: Any]) {
         let player = FootballPlayer(id: id, name: name, information: information, priority: priority)
+		// Why is player.priority an optional when we are passing its key as parameter above?
         let playerPriority = player.priority?.rawValue ?? ""
         let itemJSON = [
             "id": player.id,
             "name" : player.name,
             "information": player.information,
             "priority": playerPriority
+			// Why is compactMapValues used when none of the values above is an optional?
         ].compactMapValues{$0}
         return(player, itemJSON)
     }
     
     func makeJsonOfOnePlayer(item: [String: Any]) -> Data {
+		// Force-try
+		// JSONdata should be JsonData
         let JSONdata =  try! JSONSerialization.data(withJSONObject: ["player": item])
         return JSONdata
     }
-    
+
+	// Typo makeJsonOFallPlayers
     func makeJsonOFallPlayers(items: [[String: Any]]) -> Data {
+		// Force-unwrap
+		// JSONdata should be JsonData
         let JSONdata =  try! JSONSerialization.data(withJSONObject: ["items": items])
         return JSONdata
     }

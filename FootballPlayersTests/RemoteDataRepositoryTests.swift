@@ -31,7 +31,8 @@ final class RemoteDataRepositoryTests: XCTestCase {
         
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
-    
+
+	// Typo in test_fetch_deliversErorOnClientError
     //Delivers connectivity error
     func test_fetch_deliversErorOnClientError() {
         let(sut, client) = makeSUT()
@@ -107,7 +108,8 @@ final class RemoteDataRepositoryTests: XCTestCase {
         client.completePlayerInformationFetch(withstatusCode: 200, playerID: playerID)
         waitForExpectations(timeout: 1)
     }
-    
+
+	// This could be outsourced to its own file and marked internal so other tests might also use this spy.
     //MARK: - Helpers
     private class NetworkClientSpy: NetworkClient {
         
@@ -128,7 +130,9 @@ final class RemoteDataRepositoryTests: XCTestCase {
         func complete(with error: Error, at index: Int = 0) {
             messages[index].completion(.failure(error))
         }
-        
+
+		// statusCode is a good name for a named parameter, but "with" like in the
+		// previous complete method is not providing any information.
         func complete(withstatusCode code: Int, data: Data, at index: Int = 0) {
             let response = HTTPURLResponse(
                 url: requestedURLs[index],
@@ -145,6 +149,8 @@ final class RemoteDataRepositoryTests: XCTestCase {
                 httpVersion: nil,
                 headerFields: nil)!
             let player = FootballPlayer(id: playerID, name: "someName", information: "someInfo", priority: "High Priority")
+			// Looks like a copy-paste test with the priority?.rawValue and the
+			// compactMapValues from the productive code
             let playerPriority = player.priority?.rawValue ?? ""
             let itemJSON = [
                 "id": player.id,

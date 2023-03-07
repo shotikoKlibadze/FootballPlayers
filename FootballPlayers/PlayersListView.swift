@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayersListView: View {
-    
+	// Should be private and a @StateObject
     @ObservedObject var viewModel: PlayersListViewModel
     
     init(viewModel: PlayersListViewModel) {
@@ -26,6 +26,7 @@ struct PlayersListView: View {
         case .loaded(let players):
             NavigationView {
                 List(players, id: \.id) { player in
+					// This view shouldn't know anything about the PlayerDetailView
                     NavigationLink(destination: PlayerDetailView(viewModel: ViewModelFactory.makePlayerDetailViewModel(plyaerID: player.id))) {
                         HStack(spacing: 10) {
                             Text(player.name)
@@ -42,6 +43,7 @@ struct PlayersListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+		// The preview is only showing a blank screen
         PlayersListView(viewModel: PlayersListViewModel(service: RemoteDataRepository(client: MockNetworkClient())))
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerDetailView: View {
-    
+	// Should be private and a @StateObject
     @ObservedObject var viewModel: PlayerDetailViewModel
     
     var body: some View {
@@ -26,6 +26,7 @@ struct PlayerDetailView: View {
 }
 struct PlayerDetailView_Previews: PreviewProvider {
     static var previews: some View {
+		// The preview is only showing a blank screen
         PlayerDetailView(viewModel: PlayerDetailViewModel(service: RemoteDataRepository(client: MockNetworkClient()), playerID: 3))
     }
 }
