@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0971BB9429B63D11007A03CC /* FootballPlayersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BB9329B63D11007A03CC /* FootballPlayersApp.swift */; };
-		0971BB9629B63D11007A03CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BB9529B63D11007A03CC /* ContentView.swift */; };
+		0971BB9629B63D11007A03CC /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BB9529B63D11007A03CC /* PlayersListView.swift */; };
 		0971BB9829B63D12007A03CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971BB9729B63D12007A03CC /* Assets.xcassets */; };
 		0971BB9B29B63D12007A03CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0971BB9A29B63D12007A03CC /* Preview Assets.xcassets */; };
 		0971BBAC29B63DB0007A03CC /* RemoteDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBAB29B63DB0007A03CC /* RemoteDataRepositoryTests.swift */; };
@@ -18,6 +18,11 @@
 		0971BBBB29B63E55007A03CC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBBA29B63E55007A03CC /* NetworkClient.swift */; };
 		0971BBBF29B63E7A007A03CC /* RemoteDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBBE29B63E7A007A03CC /* RemoteDataRepository.swift */; };
 		0971BBC129B63E85007A03CC /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC029B63E85007A03CC /* Mapper.swift */; };
+		0971BBC329B65704007A03CC /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC229B65704007A03CC /* MockNetworkClient.swift */; };
+		0971BBC529B65913007A03CC /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971BBC429B65913007A03CC /* PlayersViewModel.swift */; };
+		09AAA1B629B71D75002E76A0 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAA1B529B71D75002E76A0 /* ViewModelFactory.swift */; };
+		09AAA1BA29B72B0F002E76A0 /* PlayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAA1B929B72B0F002E76A0 /* PlayerDetailView.swift */; };
+		09AAA1BC29B73C3D002E76A0 /* PlayerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AAA1BB29B73C3D002E76A0 /* PlayerDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +38,7 @@
 /* Begin PBXFileReference section */
 		0971BB9029B63D11007A03CC /* FootballPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0971BB9329B63D11007A03CC /* FootballPlayersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPlayersApp.swift; sourceTree = "<group>"; };
-		0971BB9529B63D11007A03CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0971BB9529B63D11007A03CC /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
 		0971BB9729B63D12007A03CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0971BB9A29B63D12007A03CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0971BBA929B63DB0007A03CC /* FootballPlayersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballPlayersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,11 @@
 		0971BBBA29B63E55007A03CC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		0971BBBE29B63E7A007A03CC /* RemoteDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataRepository.swift; sourceTree = "<group>"; };
 		0971BBC029B63E85007A03CC /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		0971BBC229B65704007A03CC /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
+		0971BBC429B65913007A03CC /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
+		09AAA1B529B71D75002E76A0 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		09AAA1B929B72B0F002E76A0 /* PlayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailView.swift; sourceTree = "<group>"; };
+		09AAA1BB29B73C3D002E76A0 /* PlayerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +97,8 @@
 			children = (
 				0971BBB229B63DF7007A03CC /* Logic */,
 				0971BB9329B63D11007A03CC /* FootballPlayersApp.swift */,
-				0971BB9529B63D11007A03CC /* ContentView.swift */,
+				0971BB9529B63D11007A03CC /* PlayersListView.swift */,
+				09AAA1B929B72B0F002E76A0 /* PlayerDetailView.swift */,
 				0971BB9729B63D12007A03CC /* Assets.xcassets */,
 				0971BB9929B63D12007A03CC /* Preview Content */,
 			);
@@ -116,6 +127,8 @@
 				0971BBBD29B63E6C007A03CC /* Data */,
 				0971BBB729B63E2B007A03CC /* Models */,
 				0971BBBC29B63E5D007A03CC /* Protocols */,
+				09AAA1B729B71E1E002E76A0 /* Network */,
+				09AAA1B829B71E29002E76A0 /* ViewModel */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -145,6 +158,24 @@
 				0971BBC029B63E85007A03CC /* Mapper.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		09AAA1B729B71E1E002E76A0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0971BBC229B65704007A03CC /* MockNetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		09AAA1B829B71E29002E76A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09AAA1B529B71D75002E76A0 /* ViewModelFactory.swift */,
+				0971BBC429B65913007A03CC /* PlayersViewModel.swift */,
+				09AAA1BB29B73C3D002E76A0 /* PlayerDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,13 +278,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0971BB9629B63D11007A03CC /* ContentView.swift in Sources */,
+				0971BBC529B65913007A03CC /* PlayersViewModel.swift in Sources */,
+				0971BB9629B63D11007A03CC /* PlayersListView.swift in Sources */,
 				0971BBB929B63E45007A03CC /* PlayersDataService.swift in Sources */,
+				09AAA1BC29B73C3D002E76A0 /* PlayerDetailViewModel.swift in Sources */,
 				0971BB9429B63D11007A03CC /* FootballPlayersApp.swift in Sources */,
+				09AAA1BA29B72B0F002E76A0 /* PlayerDetailView.swift in Sources */,
 				0971BBBF29B63E7A007A03CC /* RemoteDataRepository.swift in Sources */,
 				0971BBC129B63E85007A03CC /* Mapper.swift in Sources */,
 				0971BBB629B63E1E007A03CC /* FootballPlayerResponse.swift in Sources */,
+				09AAA1B629B71D75002E76A0 /* ViewModelFactory.swift in Sources */,
 				0971BBB429B63E11007A03CC /* FootballPlayer.swift in Sources */,
+				0971BBC329B65704007A03CC /* MockNetworkClient.swift in Sources */,
 				0971BBBB29B63E55007A03CC /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

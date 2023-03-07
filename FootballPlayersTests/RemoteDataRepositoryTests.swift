@@ -74,7 +74,18 @@ final class RemoteDataRepositoryTests: XCTestCase {
                      player2.model,
                      player3.model,
                      player4.model]
-        expect(sut, toCompleteWith: .success(items)) {
+        let itemsToExpect = items.filter { player in
+            switch RemoteDataRepository.priority {
+            case .high:
+                return player.priority == .high
+            case .mid:
+                return player.priority == .high || player.priority == .mid
+            case .low:
+                return player == player
+            }
+        }
+        
+        expect(sut, toCompleteWith: .success(itemsToExpect)) {
             let json = makeItemsJson(items: [player1.json, player2.json, player3.json, player4.json])
             client.complete(withstatusCode: 200, data: json)
         }

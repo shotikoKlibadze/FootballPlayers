@@ -6,14 +6,25 @@
 //
 
 import Foundation
-
+import SwiftUI
 enum Priority: String {
     case high = "High Priority"
     case mid = "Mid Priority"
     case low = "Low Priority"
+    
+    var image: UIImage {
+        switch self {
+        case .high:
+            return UIImage(systemName: "arrow.up")!
+        case .mid:
+            return UIImage(systemName: "arrow.up.arrow.down")!
+        case .low:
+            return UIImage(systemName: "arrow.down")!
+        }
+    }
 }
 
-struct FootballPlayer: Equatable {
+struct FootballPlayer: Equatable, Identifiable {
 
     let id: Int
     let name: String

@@ -11,6 +11,8 @@ final class RemoteDataRepository: PlayersDataService {
     
     private let client: NetworkClient
     
+    static var priority: Priority = .low
+    
     typealias AllPlayersResult = PlayersDataService.Result
     typealias PlayerResult = PlayersDataService.PlayerResult
     
@@ -31,7 +33,16 @@ final class RemoteDataRepository: PlayersDataService {
                 self?.map(data: data, response: response, completion: { (mapperResult: Result<FootballPlayerFeedResponse,Swift.Error>) in
                     switch mapperResult {
                     case .success(let mapperResponse):
-                        completion(.success(mapperResponse.items.map({FootballPlayer(from: $0)})))
+                        completion(.success(mapperResponse.items.map({FootballPlayer(from: $0)}).filter({ player in
+                            switch RemoteDataRepository.priority {
+                            case .high:
+                                return player.priority == .high
+                            case .mid:
+                                return player.priority == .high || player.priority == .mid
+                            case .low:
+                                return true
+                            }
+                        })))
                     case .failure(let error):
                         completion(.failure(error))
                     }

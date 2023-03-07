@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct FootballPlayersApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PlayersListView(viewModel: ViewModelFactory.makeAllPplayersViewModel())
         }
     }
 }
