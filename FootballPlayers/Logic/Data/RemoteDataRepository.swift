@@ -12,10 +12,13 @@ final class RemoteDataRepository: PlayersDataService {
     private let client: NetworkClient
     
     static var priority: Priority = .low
-    
+
+	// Typealias should only be used when really necessary or when providing a real
+	// advantage otherwise they are obfuscating only the type which makes it hard to read it.
     typealias AllPlayersResult = PlayersDataService.Result
     typealias PlayerResult = PlayersDataService.PlayerResult
-    
+
+	// The own Error type should get a more expressive name, also to prevent naming collision with the Swift.Error.
     enum Error: Swift.Error {
         case connectivity
         case invalidData
@@ -24,8 +27,10 @@ final class RemoteDataRepository: PlayersDataService {
     init(client: NetworkClient) {
         self.client = client
     }
-    
+
+	// Here, for the AllPlayersResult type it's hard to get its real type because of the typealias.
     func fetchPlayers(completion: @escaping (AllPlayersResult) -> Void) {
+		// Force-unwrap
         let url = URL(string: "http://any-url.com")!
         client.fetch(from: url) { [weak self] result in
             switch result {
@@ -33,7 +38,10 @@ final class RemoteDataRepository: PlayersDataService {
                 self?.map(data: data, response: response, completion: { (mapperResult: Result<FootballPlayerFeedResponse,Swift.Error>) in
                     switch mapperResult {
                     case .success(let mapperResponse):
+						// This compact code is hard to read and could be improved by wrapping to new lines.
                         completion(.success(mapperResponse.items.map({FootballPlayer(from: $0)}).filter({ player in
+							// This switch is not really maintainable because when we introduce
+							// a new priority then the comparison increases and increases.
                             switch RemoteDataRepository.priority {
                             case .high:
                                 return player.priority == .high
@@ -71,7 +79,8 @@ final class RemoteDataRepository: PlayersDataService {
             }
         }
     }
-    
+
+	// Should be private
     func map<T:Codable>(data: Data, response: HTTPURLResponse, completion: @escaping (Swift.Result<T,Swift.Error>) -> Void) {
         do {
             let result = try Mapper<T>.map(data: data, response: response)

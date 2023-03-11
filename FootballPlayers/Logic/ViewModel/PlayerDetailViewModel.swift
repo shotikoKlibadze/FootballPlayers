@@ -7,6 +7,7 @@
 
 import Foundation
 
+// When using async/await then view models should be marked with @MainActor
 class PlayerDetailViewModel: ObservableObject {
     
     enum State {
@@ -32,6 +33,7 @@ class PlayerDetailViewModel: ObservableObject {
             switch result {
             case .success(let player):
                 self?.state = .loaded(player.information)
+				// print statements shouldn't be in code (we should use a logger instead)
                 print(player.priority?.rawValue ?? "")
             case .failure(let error):
                 self?.state = .failed(error)

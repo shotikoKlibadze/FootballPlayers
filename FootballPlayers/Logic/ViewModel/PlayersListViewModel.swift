@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// When using async/await then view models should be marked with @MainActor
 class PlayersListViewModel: ObservableObject {
     
     enum State {

@@ -8,8 +8,11 @@
 import Foundation
 import SwiftUI
 
+// When providing the Priority as an Int rather than a String then
+// it would be easier to sort / filter the cases.
+// This enum should maybe moved to its own file.
 enum Priority: String {
-    
+	// This is not quite what was requested by the requirements, but ok.
     case high = "High Priority"
     case mid = "Mid Priority"
     case low = "Low Priority"
@@ -37,6 +40,7 @@ struct FootballPlayer: Equatable, Identifiable {
         self.id = response.id
         self.name = response.name
         self.information = response.information
+		// The type should be preferred over .init because it would make it more readable.
         self.priority = .init(rawValue: response.priority)
     }
     
@@ -44,6 +48,7 @@ struct FootballPlayer: Equatable, Identifiable {
         self.id = id
         self.name = name
         self.information = information
+		// The type should be preferred over .init because it would make it more readable.
         self.priority = .init(rawValue: priority)
     }
 }
